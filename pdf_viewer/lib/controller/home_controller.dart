@@ -16,6 +16,8 @@ class HomeController extends GetxController {
 
   /// .............. Declaring Methods ..🤩.🤩.🤩..................
   Future<void> fetchPDF() async {
+    showLoading = true;
+    update();
     http.Response response = await http.get(Uri.parse(pdfUrl));
     Directory dir = await getTemporaryDirectory();
     File file = File("${dir.path}/data.pdf");
