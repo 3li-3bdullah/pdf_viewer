@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pdf_viewer/controller/my_binding.dart';
 import 'package:pdf_viewer/view/home.dart';
 
 void main() {
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: 'PDF Viewer',
       debugShowCheckedModeBanner: false,
+      initialBinding: MyBinding(),
       home: Home(),
     );
   }
